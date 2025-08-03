@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Viết hàm kiểm tra số chẵn lẻ
+        let input = prompt("Nhập một số nguyên:");
+        let num = parseInt(input);
+
+        function isEven(num) {
+            return num % 2 === 0;
+        }
+        function isOdd(num) {
+            return num % 2 !== 0;
+        }
+        function checkNumber(value, rawInput) {
+            if (isNaN(value)) {
+                console.log(`"${rawInput}" không phải là số hợp lệ.`);
+            } else if (isEven(value)) {
+                console.log(`${value} là số chẵn`);
+            } else if (isOdd(value)) {
+                console.log(`${value} là số lẻ`);
+            }
+        }
+        checkNumber(num,input);
+    </script>
+</body>
+
+</html>
