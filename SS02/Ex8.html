@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let displayUserInfo = (user) =>
+            `${user.name} is ${user.age} years old , lives in ${user.location.city},
+        ${user.location.country} and works as a ${user.job?.title ?? "Unknown"} at ${user.job?.company ?? "Unknown"},
+        and can be contacted via ${user.contact?.email ?? "Unknown"} or ${user.contact?.phone ?? "Unknown"}. 
+        `;
+          const user1 = {
+            name: "John",
+            age: 25,
+            location: {
+                city: "Hanoi",
+                country: "Vietnam",
+            },
+        };
+        const user2 = {
+            name: "John",
+            age: 25,
+            location: {
+                city: "Hanoi",
+                country: "Vietnam",
+            },
+            contact: {
+                email: "john@example.com",
+                phone: "0123456789",
+            },
+            job: {
+                title: "Developer",
+                company: "Tech Corp",
+            },
+        };
+
+        console.log(displayUserInfo(user1));
+        console.log(displayUserInfo(user2));
+    </script>
+</body>
+
+</html>

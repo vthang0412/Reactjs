@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let phoneBooks = [];
+        const fullName = prompt("Nhap name:");
+        const phone = +prompt("Nhap phone:");
+        const email = prompt("Nhap email:");
+        if (!fullName || !phone || isNaN(phone) || !email) {
+            console.log("Vui lòng nhập đầy đủ thông tin.");
+        } else {
+            function addContact() {
+                const contact = {
+                    name: fullName,
+                    phone: phone,
+                    email: email,
+                }
+                phoneBooks.push(contact);
+            }
+        }
+        function displayContacts() {
+            phoneBooks.forEach(contact => {
+                console.log(`Name: ${contact.name}, Phone: ${contact.phone}, Email: ${contact.email}`);
+            });
+        }
+        addContact();
+        displayContacts();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let input = prompt("Nhập tên của bạn:");
+        let weather = prompt("Nhập thời tiết hôm nay (sunny/rainy):");
+        function greetingWithWeather(name, weather){
+            if (weather === "sunny") {
+                return `Hello ${name}, Hôm nay trời nắng tuyệt vời!`;
+            } else if (weather === "rainy") {
+                return `Hello ${name}, Hôm nay trời mưa, hãy mang theo ô!`;
+            } else {
+                return `Hello ${name}, Hôm nay thời tiết không xác định!`;
+            }
+        }
+        let message = greetingWithWeather(input, weather);
+        console.log(message);
+    </script>
+</body>
+</html>
